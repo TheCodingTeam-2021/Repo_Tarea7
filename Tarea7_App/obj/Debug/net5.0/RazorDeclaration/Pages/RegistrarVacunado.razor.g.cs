@@ -126,15 +126,16 @@ using Tarea7_App.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 84 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\RegistrarVacunado.razor"
+#line 82 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\RegistrarVacunado.razor"
       
-    string Mensaje, Alerta;
-    int dia, mes, cont = 0;
+    bool exits;
+    string Mensaje;
+    int dia, mes;
     string MesString;
     string DiaString;
 
     Vacunados vc = new Vacunados();
-    List<Vacunados> GetVacunados() => new Tarea6Context().Vacunados.ToList();
+    List<Vacunados> GetVacunados() => new Tarea6Context().Vacunados.Where(v => v.Cedula == vc.Cedula).ToList();
     
     List<Vacunas> GetVacunas() => new Tarea6Context().Vacunas.ToList();
 
@@ -181,76 +182,74 @@ using Tarea7_App.Models;
     
     async Task FindPerson(){
         Persona = await Http.GetFromJsonAsync<Root>("https://api.adamix.net/apec/cedula/"+vc.Cedula);
+        
         if(Persona.ok){
+            foreach (var item in @GetVacunados()){
+                exits = true;
+            }
+            if(exits==true){
+                Mensaje="Paciente Ya Registrado!";
 
-            foreach (var item in GetVacunados().Where(v => v.Cedula == vc.Cedula)){
-                cont++;
+            } 
+            else{
+                vc.Nombre = Persona.Nombres;
+                vc.Apellido = Persona.Apellido1 + " " + Persona.Apellido2;
+                vc.FechaNacimiento = Persona.FechaNacimiento.Substring(0,10);
+                vc.FechaPdosis = DateTime.Now.ToString("yyyy-MM-dd");
 
-                if (cont >= 1){
-                    Mensaje = "Ya esta Registrado!";
+                MesString =Persona.FechaNacimiento.Substring(5,2);
+                mes = int.Parse(MesString);
+                DiaString =Persona.FechaNacimiento.Substring(8,2);
+                dia = int.Parse(DiaString);
+
+                if((dia>=21&&mes==3)||(dia<=20&&mes==4)){
+                    vc.SignoZodiacal =  "Aries";
                 }
 
-                else{
-                    Mensaje="";
-                    vc.Nombre = Persona.Nombres;
-                    vc.Apellido = Persona.Apellido1 + " " + Persona.Apellido2;
-                    vc.FechaNacimiento = Persona.FechaNacimiento.Substring(0,10);
-
-                    MesString =Persona.FechaNacimiento.Substring(5,2);
-                    mes = int.Parse(MesString);
-                    DiaString =Persona.FechaNacimiento.Substring(8,2);
-                    dia = int.Parse(DiaString);
-
-                    if((dia>=21&&mes==3)||(dia<=20&&mes==4)){
-                        vc.SignoZodiacal =  "Aries";
-                    }
-
-                    else if((dia>=24&&mes==9)||(dia<=23&&mes==10)){
-                        vc.SignoZodiacal =  "Libra";
-                    }
-
-                    else if((dia>=21&&mes==4)||(dia<=21&&mes==5)){
-                        vc.SignoZodiacal = "Tauro";
-                    }
-                        
-                    else if((dia>=24&&mes==10)||(dia<=22&&mes==11)){
-                        vc.SignoZodiacal = "Escorpio";
-                    }
-                        
-                    else if((dia>=22&&mes==5)||(dia<=21&&mes==6)){
-                        vc.SignoZodiacal = "Geminis";
-                    }
-
-                    else if((dia>=23&&mes==11)||(dia<=21&&mes==12)){
-                        vc.SignoZodiacal = "Sagitario";
-                    }
-                        
-                    else if((dia>=21&&mes==6)||(dia<=23&&mes==7)){
-                        vc.SignoZodiacal = "Cancer";
-                    }
-                        
-                    else if((dia>=22&&mes==12)||(dia<=20&&mes==1)){
-                        vc.SignoZodiacal = "Capricornio";
-                    }
-                        
-                    else if((dia>=24&&mes==7)||(dia<=23&&mes==8)){
-                        vc.SignoZodiacal = "Leo";
-                    }
-                        
-                    else if((dia>=21&&mes==1)||(dia<=19&&mes==2)){
-                        vc.SignoZodiacal = "Acuario";
-                    }
-                        
-                    else if((dia>=24&&mes==8)||(dia<=23&&mes==9)){
-                        vc.SignoZodiacal = "Virgo";
-                    }
-
-                    else if((dia>=20&&mes==2)||(dia<=20&&mes==3)){
-                        vc.SignoZodiacal = "Piscis";
-                    }
-
-                    Alerta = "!!";
+                else if((dia>=24&&mes==9)||(dia<=23&&mes==10)){
+                    vc.SignoZodiacal =  "Libra";
                 }
+
+                else if((dia>=21&&mes==4)||(dia<=21&&mes==5)){
+                    vc.SignoZodiacal = "Tauro";
+                }
+                    
+                else if((dia>=24&&mes==10)||(dia<=22&&mes==11)){
+                    vc.SignoZodiacal = "Escorpio";
+                }
+                    
+                else if((dia>=22&&mes==5)||(dia<=21&&mes==6)){
+                    vc.SignoZodiacal = "Geminis";
+                }
+
+                else if((dia>=23&&mes==11)||(dia<=21&&mes==12)){
+                    vc.SignoZodiacal = "Sagitario";
+                }
+                    
+                else if((dia>=21&&mes==6)||(dia<=23&&mes==7)){
+                    vc.SignoZodiacal = "Cancer";
+                }
+                    
+                else if((dia>=22&&mes==12)||(dia<=20&&mes==1)){
+                    vc.SignoZodiacal = "Capricornio";
+                }
+                    
+                else if((dia>=24&&mes==7)||(dia<=23&&mes==8)){
+                    vc.SignoZodiacal = "Leo";
+                }
+                    
+                else if((dia>=21&&mes==1)||(dia<=19&&mes==2)){
+                    vc.SignoZodiacal = "Acuario";
+                }
+                    
+                else if((dia>=24&&mes==8)||(dia<=23&&mes==9)){
+                    vc.SignoZodiacal = "Virgo";
+                }
+
+                else if((dia>=20&&mes==2)||(dia<=20&&mes==3)){
+                    vc.SignoZodiacal = "Piscis";
+                }
+
             }
         } 
         else{
@@ -261,24 +260,34 @@ using Tarea7_App.Models;
     void AddPerson(){
         using (Tarea6Context cmd_Insert = new Tarea6Context())
                 {
+                    if(vc.Cedula == null){
+                        Mensaje="Debe Lenar el Campo Cedula!";
+
+                    }
+                    else{
                     cmd_Insert.Add(vc);
                     cmd_Insert.SaveChanges();
+                    Clear();
                     Mensaje="Paciente Vacunado!";
+                    }
                 }
     }
 
     void Clear(){
-        vc.Cedula = "";
+        vc.Cedula = null;
         vc.Nombre = "";
         vc.Apellido = "";
         vc.FechaNacimiento = "";
         vc.Provincia = "";
         vc.SignoZodiacal = "";
         vc.Telefono = "";
-        Alerta = "";
+        vc.FechaPdosis="";
+        vc.FechaSdosis="";
+        vc.MarcaVacuna="";
         Mensaje = "";
         
     }
+    
 
 #line default
 #line hidden

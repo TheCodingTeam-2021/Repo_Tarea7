@@ -21,63 +21,98 @@ using System.Net.Http;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
-using Microsoft.AspNetCore.Authorization;
+using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
-using Microsoft.AspNetCore.Components.Authorization;
+using System.ComponentModel.DataAnnotations;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
-using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 5 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
-using Microsoft.AspNetCore.Components.Routing;
+using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 6 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
-using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
-using Microsoft.AspNetCore.Components.Web.Virtualization;
+using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 8 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
-using Microsoft.JSInterop;
+using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 9 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
-using Tarea7_App;
+using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 10 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+using Microsoft.JSInterop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+using Tarea7_App;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Tarea7_App.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 13 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+using System.Text.Json.Serialization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 14 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+using System.Net;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\RegistrarVacunado.razor"
+using Tarea7_App.Models;
 
 #line default
 #line hidden
@@ -90,6 +125,165 @@ using Tarea7_App.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 84 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\RegistrarVacunado.razor"
+      
+    string Mensaje, Alerta;
+    int dia, mes, cont = 0;
+    string MesString;
+    string DiaString;
+
+    Vacunados vc = new Vacunados();
+    List<Vacunados> GetVacunados() => new Tarea6Context().Vacunados.ToList();
+    
+    List<Vacunas> GetVacunas() => new Tarea6Context().Vacunas.ToList();
+
+    public class Root {
+        public string Cedula { get; set; } 
+        public string Nombres { get; set; } 
+        public string Apellido1 { get; set; } 
+        public String Apellido2 { get; set; } 
+        public string FechaNacimiento { get; set; } 
+        public string LugarNacimiento { get; set; } 
+        public int IDCategoria { get; set; } 
+        public string IdSexo { get; set; } 
+        public string IdEstadoCivil { get; set; } 
+        public int IdOcupacion { get; set; } 
+        public int IDNacionalidad { get; set; } 
+        public int IDMunicipio { get; set; } 
+        public int IDColegio { get; set; } 
+        public object IDCausaCancelacion { get; set; } 
+        public string IDEstatus { get; set; } 
+        public string EstatusCedulaAzul { get; set; } 
+        public string CedulaAnterior { get; set; } 
+        public string mun_ced { get; set; } 
+        public string seq_ced { get; set; } 
+        public string ver_ced { get; set; } 
+        public object V2004 { get; set; } 
+        public object V2008 { get; set; } 
+        public object V2012 { get; set; } 
+        public object V2016 { get; set; } 
+        public object PLD { get; set; } 
+        public object PRD { get; set; } 
+        public object PRSC { get; set; } 
+        public object PRM { get; set; } 
+        public object Multiplicador_NombreCompleto { get; set; } 
+        public object Multiplicador_Cedula { get; set; } 
+        public object Simpatia_Descripcion { get; set; } 
+        public object Ilocalizable { get; set; } 
+        public object Apodo { get; set; } 
+        public object PadronLF { get; set; } 
+        public bool ok { get; set; } 
+        public string foto { get; set; } 
+    }
+
+    Root Persona = new Root();
+    
+    async Task FindPerson(){
+        Persona = await Http.GetFromJsonAsync<Root>("https://api.adamix.net/apec/cedula/"+vc.Cedula);
+        if(Persona.ok){
+
+            foreach (var item in GetVacunados().Where(v => v.Cedula == vc.Cedula)){
+                cont++;
+
+                if (cont >= 1){
+                    Mensaje = "Ya esta Registrado!";
+                }
+
+                else{
+                    Mensaje="";
+                    vc.Nombre = Persona.Nombres;
+                    vc.Apellido = Persona.Apellido1 + " " + Persona.Apellido2;
+                    vc.FechaNacimiento = Persona.FechaNacimiento.Substring(0,10);
+
+                    MesString =Persona.FechaNacimiento.Substring(5,2);
+                    mes = int.Parse(MesString);
+                    DiaString =Persona.FechaNacimiento.Substring(8,2);
+                    dia = int.Parse(DiaString);
+
+                    if((dia>=21&&mes==3)||(dia<=20&&mes==4)){
+                        vc.SignoZodiacal =  "Aries";
+                    }
+
+                    else if((dia>=24&&mes==9)||(dia<=23&&mes==10)){
+                        vc.SignoZodiacal =  "Libra";
+                    }
+
+                    else if((dia>=21&&mes==4)||(dia<=21&&mes==5)){
+                        vc.SignoZodiacal = "Tauro";
+                    }
+                        
+                    else if((dia>=24&&mes==10)||(dia<=22&&mes==11)){
+                        vc.SignoZodiacal = "Escorpio";
+                    }
+                        
+                    else if((dia>=22&&mes==5)||(dia<=21&&mes==6)){
+                        vc.SignoZodiacal = "Geminis";
+                    }
+
+                    else if((dia>=23&&mes==11)||(dia<=21&&mes==12)){
+                        vc.SignoZodiacal = "Sagitario";
+                    }
+                        
+                    else if((dia>=21&&mes==6)||(dia<=23&&mes==7)){
+                        vc.SignoZodiacal = "Cancer";
+                    }
+                        
+                    else if((dia>=22&&mes==12)||(dia<=20&&mes==1)){
+                        vc.SignoZodiacal = "Capricornio";
+                    }
+                        
+                    else if((dia>=24&&mes==7)||(dia<=23&&mes==8)){
+                        vc.SignoZodiacal = "Leo";
+                    }
+                        
+                    else if((dia>=21&&mes==1)||(dia<=19&&mes==2)){
+                        vc.SignoZodiacal = "Acuario";
+                    }
+                        
+                    else if((dia>=24&&mes==8)||(dia<=23&&mes==9)){
+                        vc.SignoZodiacal = "Virgo";
+                    }
+
+                    else if((dia>=20&&mes==2)||(dia<=20&&mes==3)){
+                        vc.SignoZodiacal = "Piscis";
+                    }
+
+                    Alerta = "!!";
+                }
+            }
+        } 
+        else{
+            Mensaje="Cedula No Encontrada...";
+        }
+    }
+
+    void AddPerson(){
+        using (Tarea6Context cmd_Insert = new Tarea6Context())
+                {
+                    cmd_Insert.Add(vc);
+                    cmd_Insert.SaveChanges();
+                    Mensaje="Paciente Vacunado!";
+                }
+    }
+
+    void Clear(){
+        vc.Cedula = "";
+        vc.Nombre = "";
+        vc.Apellido = "";
+        vc.FechaNacimiento = "";
+        vc.Provincia = "";
+        vc.SignoZodiacal = "";
+        vc.Telefono = "";
+        Alerta = "";
+        Mensaje = "";
+        
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

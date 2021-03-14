@@ -10,7 +10,6 @@ C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\Tarea7_App.pdb
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\Tarea7_App.Views.dll
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\Tarea7_App.Views.pdb
-C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\Humanizer.dll
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\Microsoft.Bcl.HashCode.dll
@@ -97,8 +96,6 @@ C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\runtimes\alpine-x64\native\libe_sqlite3.so
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\runtimes\linux-arm\native\libe_sqlite3.so
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\runtimes\linux-arm64\native\libe_sqlite3.so
@@ -169,3 +166,6 @@ C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\obj\
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\obj\Debug\net5.0\Razor\Pages\VacunadosMarca.razor.g.cs
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\obj\Debug\net5.0\Razor\Pages\VacunadosProvincia.razor.g.cs
 C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\obj\Debug\net5.0\Razor\Pages\VacunadosZodiacal.razor.g.cs
+C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\Humanizer.dll
+C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe

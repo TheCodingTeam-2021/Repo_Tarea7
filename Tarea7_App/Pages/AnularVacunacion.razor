@@ -1,6 +1,93 @@
 @page "/AnularVacunacion"
+@using Tarea7_App.Models
+@using System.Data.SqlClient
+@using Microsoft.Data.Sqlite
+@using Microsoft.EntityFrameworkCore
+@inject HttpClient Http;
 
 <h2>Anular registro de vacunacion</h2>
 <h4>Ingrese su cedula:</h4>
-<input type="text" id="cedula" name="cedula"><br><br>
-<button class="btn btn-primary">Eliminar</button>
+<input type="text" id="cedula" name="cedula" @bind-value="@vc.Cedula">
+<br>
+<br>
+<button class="btn btn-primary" @onclick="DelPerson">Eliminar</button>
+<br>
+<br>
+<p><h5> <strong>@Mensaje</strong></h5> </p>
+<br>
+
+@code{
+    // Variables al utilizar en el codigo.
+    bool exists;
+    string Mensaje;
+    int dia, mes;
+    string MesString;
+    string DiaString;
+
+
+    Vacunados vc = new Vacunados();
+
+    // Lista de los vacunados con Where, para saber si existe el registro.
+    List<Vacunados> GetVacunados() => new Tarea6Context().Vacunados.Where(v => v.Cedula == vc.Cedula).ToList();
+
+    // Metodo para eliminar registrados.
+    void DelPerson()
+    {
+        using (Tarea6Context cmd_Delete = new Tarea6Context())
+        {
+            if (vc.Cedula == null)
+            {
+                Mensaje = "Debe Lenar el Campo Cedula!";
+
+            }
+            else
+            {
+                // Con este foreach conocemos si el vacunado ya existe.
+                foreach (var item in @GetVacunados())
+                {
+                    exists = true;
+                }
+                if (exists == true)
+                {
+                    cmd_Delete.Remove(vc);
+                    cmd_Delete.SaveChanges();
+                    Clear();
+                    Mensaje = "Paciente Eliminado!";
+                }
+                else
+                {
+                    Mensaje = "Paciente no encontrado!";
+                }
+
+            }
+        }
+    }
+
+    // Metodo para limpiar los campos.
+    void Clear()
+    {
+        vc.Cedula = null;
+        Mensaje = "";
+
+    }
+
+    // Metodo para registrar registrados.
+    void AddPerson()
+    {
+        using (Tarea6Context cmd_Insert = new Tarea6Context())
+        {
+            if (vc.Cedula == null)
+            {
+                Mensaje = "Debe Lenar el Campo Cedula!";
+
+            }
+            else
+            {
+                cmd_Insert.Add(vc);
+                cmd_Insert.SaveChanges();
+                Clear();
+                Mensaje = "Paciente Vacunado!";
+            }
+        }
+    }
+}

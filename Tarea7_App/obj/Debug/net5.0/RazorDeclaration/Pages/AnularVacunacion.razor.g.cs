@@ -110,6 +110,34 @@ using System.Net;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\Pages\AnularVacunacion.razor"
+using Tarea7_App.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\Pages\AnularVacunacion.razor"
+using System.Data.SqlClient;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\Pages\AnularVacunacion.razor"
+using Microsoft.Data.Sqlite;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\Pages\AnularVacunacion.razor"
+using Microsoft.EntityFrameworkCore;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/AnularVacunacion")]
     public partial class AnularVacunacion : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -118,6 +146,87 @@ using System.Net;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 19 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\Pages\AnularVacunacion.razor"
+      
+    // Variables al utilizar en el codigo.
+    bool exists;
+    string Mensaje;
+    int dia, mes;
+    string MesString;
+    string DiaString;
+
+
+    Vacunados vc = new Vacunados();
+
+    // Lista de los vacunados con Where, para saber si existe el registro.
+    List<Vacunados> GetVacunados() => new Tarea6Context().Vacunados.Where(v => v.Cedula == vc.Cedula).ToList();
+
+    // Metodo para eliminar registrados.
+    void DelPerson()
+    {
+        using (Tarea6Context cmd_Delete = new Tarea6Context())
+        {
+            if (vc.Cedula == null)
+            {
+                Mensaje = "Debe Lenar el Campo Cedula!";
+
+            }
+            else
+            {
+                // Con este foreach conocemos si el vacunado ya existe.
+                foreach (var item in @GetVacunados())
+                {
+                    exists = true;
+                }
+                if (exists == true)
+                {
+                    cmd_Delete.Remove(vc);
+                    cmd_Delete.SaveChanges();
+                    Clear();
+                    Mensaje = "Paciente Eliminado!";
+                }
+                else
+                {
+                    Mensaje = "Paciente no encontrado!";
+                }
+
+            }
+        }
+    }
+
+    // Metodo para limpiar los campos.
+    void Clear()
+    {
+        vc.Cedula = null;
+        Mensaje = "";
+
+    }
+
+    // Metodo para registrar registrados.
+    void AddPerson()
+    {
+        using (Tarea6Context cmd_Insert = new Tarea6Context())
+        {
+            if (vc.Cedula == null)
+            {
+                Mensaje = "Debe Lenar el Campo Cedula!";
+
+            }
+            else
+            {
+                cmd_Insert.Add(vc);
+                cmd_Insert.SaveChanges();
+                Clear();
+                Mensaje = "Paciente Vacunado!";
+            }
+        }
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

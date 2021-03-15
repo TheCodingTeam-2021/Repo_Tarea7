@@ -7218,25 +7218,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\civar\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\marye\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\Repo_Tarea7\\Tarea7_App\\Tarea7_App.csproj",
+      "projectUniqueName": "C:\\Users\\marye\\source\\repos\\TheCodingTeam-2021\\Repo_Tarea7\\Tarea7_App\\Tarea7_App.csproj",
       "projectName": "Tarea7_App",
-      "projectPath": "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\Repo_Tarea7\\Tarea7_App\\Tarea7_App.csproj",
-      "packagesPath": "C:\\Users\\civar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\Repo_Tarea7\\Tarea7_App\\obj\\",
+      "projectPath": "C:\\Users\\marye\\source\\repos\\TheCodingTeam-2021\\Repo_Tarea7\\Tarea7_App\\Tarea7_App.csproj",
+      "packagesPath": "C:\\Users\\marye\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marye\\source\\repos\\TheCodingTeam-2021\\Repo_Tarea7\\Tarea7_App\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\civar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\marye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -7298,7 +7293,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

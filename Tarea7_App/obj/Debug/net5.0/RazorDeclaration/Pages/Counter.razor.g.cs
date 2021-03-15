@@ -13,98 +13,98 @@ namespace Tarea7_App.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 1 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 2 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 3 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.ComponentModel.DataAnnotations;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 4 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 5 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 6 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 7 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 8 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 9 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 10 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 11 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Tarea7_App;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 12 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Tarea7_App.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 13 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.Text.Json.Serialization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
+#line 14 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.Net;
 
 #line default
@@ -119,7 +119,7 @@ using System.Net;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\Counter.razor"
+#line 9 "C:\Users\marye\source\repos\TheCodingTeam-2021\Repo_Tarea7\Tarea7_App\Pages\Counter.razor"
        
     private int currentCount = 0;
 

@@ -12,6 +12,6 @@ namespace Tarea7_App.Models
         public long Id { get; set; }
         public string Marca { get; set; }
         public string Laboratorio { get; set; }
-        public long Cantidad { get; set; }
+        public int Cantidad { get; set; }
     }
 }

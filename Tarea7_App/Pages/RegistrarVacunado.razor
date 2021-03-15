@@ -1,5 +1,8 @@
 @page "/RegistrarVacunado"
 @using Tarea7_App.Models
+@using System.Data.SqlClient
+@using Microsoft.Data.Sqlite
+@using Microsoft.EntityFrameworkCore
 @inject HttpClient Http;
 
 <h2>Registrar Vacunado</h2>
@@ -80,17 +83,23 @@
 </div>
 
 @code{
+    // Variables al utilizar en el codigo.
     bool exits;
     string Mensaje;
     int dia, mes;
     string MesString;
     string DiaString;
 
+    // Instancia de la clase del Models Vacunados donde se guardaran los Registro.
     Vacunados vc = new Vacunados();
+
+    // Lista de los vacunados con Where, para saber si existe el registro.
     List<Vacunados> GetVacunados() => new Tarea6Context().Vacunados.Where(v => v.Cedula == vc.Cedula).ToList();
-    
+
+    // Lista la cual se usara para carga los datos del select.
     List<Vacunas> GetVacunas() => new Tarea6Context().Vacunas.ToList();
 
+    // Mapeo del Json de la API.
     public class Root {
         public string Cedula { get; set; } 
         public string Nombres { get; set; } 
@@ -130,30 +139,72 @@
         public string foto { get; set; } 
     }
 
+    // Instancia de la clase del Mapeo del Json.
     Root Persona = new Root();
     
+    // Metodos para Buscar y validar la cedula a traves de la API.
     async Task FindPerson(){
+        // cargando variable con el Json de la API.
         Persona = await Http.GetFromJsonAsync<Root>("https://api.adamix.net/apec/cedula/"+vc.Cedula);
         
+        // Condicion para saber que la variable con el Json esta cargada y contiene los datos del cliente
         if(Persona.ok){
+
+            // Con este foreach conocemos si el vacunado ya existe.
             foreach (var item in @GetVacunados()){
                 exits = true;
             }
+
+            // Condicion en caso de que la cedula esta registrada.
             if(exits==true){
                 Mensaje="Paciente Ya Con la Primera Vacuna!";
 
+                // Conexion manual a la base de datos para el metodo raw de guardar la segunda fecha.
+                SqliteConnection cone;
+
+                // connetion string.
+                cone = new SqliteConnection(@"Data Source= Data//Tarea6.db");
+
+                // Abriendo la conexion.
+                cone.Open();
+                
+                // Cargando la variable con el dato que se va a guardar.
+                vc.FechaSdosis = DateTime.Now.ToString("yyyy-MM-dd");
+
+                // Sentencia de sql para el proceso de update.
+                var query = "UPDATE Vacunados SET Fecha_SDosis = '"+vc.FechaSdosis+"' Where Cedula =" + vc.Cedula;
+
+                // Creando nuevo comando al cual le pasamos la conexion y la sentencia.
+                SqliteCommand command = new SqliteCommand(query, cone);
+
+                using (Tarea6Context cmd_SegundaDosis = new Tarea6Context())
+                {
+                    // Ejecutar sentencia.
+                    cmd_SegundaDosis.Database.ExecuteSqlRaw(query, vc.Cedula);
+                }
+
+                // Cerrando la conexion
+                cone.Close();
+
+                // Mensaje del estado del proceso.
+                Mensaje="El Paciente ya estaba Registrado, por lo Cual se le registro la Segunda Dosis!";
+                // Llamada al metodo para restar la cedula.
+                RestarVacuna();
             } 
+            // De caso contrario se le cargaran estos datos a las variables.
             else{
                 vc.Nombre = Persona.Nombres;
                 vc.Apellido = Persona.Apellido1 + " " + Persona.Apellido2;
                 vc.FechaNacimiento = Persona.FechaNacimiento.Substring(0,10);
                 vc.FechaPdosis = DateTime.Now.ToString("yyyy-MM-dd");
-
+                
+                //Cargando en variables los contenidos de la fecha.
                 MesString =Persona.FechaNacimiento.Substring(5,2);
                 mes = int.Parse(MesString);
                 DiaString =Persona.FechaNacimiento.Substring(8,2);
                 dia = int.Parse(DiaString);
 
+                //Con esos contenidos los analizaremos para saber cual es su Signo Zodiacal.
                 if((dia>=21&&mes==3)||(dia<=20&&mes==4)){
                     vc.SignoZodiacal =  "Aries";
                 }
@@ -202,13 +253,16 @@
                     vc.SignoZodiacal = "Piscis";
                 }
 
+                RestarVacuna();
             }
         } 
+        // De caso contrario que no se encuentre datos se mostrara este mensaje.
         else{
             Mensaje="Cedula No Encontrada...";
         }
     }
 
+    // Metodo para registrar registrados.
     void AddPerson(){
         using (Tarea6Context cmd_Insert = new Tarea6Context())
                 {
@@ -225,6 +279,7 @@
                 }
     }
 
+    // Metodo para limpiar los campos.
     void Clear(){
         vc.Cedula = null;
         vc.Nombre = "";
@@ -237,6 +292,11 @@
         vc.FechaSdosis="";
         vc.MarcaVacuna="";
         Mensaje = "";
+        
+    }
+
+    // Metodo Para restar las Vacunas.
+    void RestarVacuna(){
         
     }
     

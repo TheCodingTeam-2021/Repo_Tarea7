@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\Repo_Tarea7\\Tarea7_App\\Tarea7_App.csproj": {}
+    "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\repo_tarea7\\tarea7_app\\Tarea7_App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\Repo_Tarea7\\Tarea7_App\\Tarea7_App.csproj": {
+    "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\repo_tarea7\\tarea7_app\\Tarea7_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\Repo_Tarea7\\Tarea7_App\\Tarea7_App.csproj",
+        "projectUniqueName": "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\repo_tarea7\\tarea7_app\\Tarea7_App.csproj",
         "projectName": "Tarea7_App",
-        "projectPath": "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\Repo_Tarea7\\Tarea7_App\\Tarea7_App.csproj",
+        "projectPath": "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\repo_tarea7\\tarea7_app\\Tarea7_App.csproj",
         "packagesPath": "C:\\Users\\civar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\Repo_Tarea7\\Tarea7_App\\obj\\",
+        "outputPath": "C:\\Users\\civar\\Desktop\\Tarea\\Programacion III\\Tarea7\\repo_tarea7\\tarea7_app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

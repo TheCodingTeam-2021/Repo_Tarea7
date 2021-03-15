@@ -13,126 +13,126 @@ namespace Tarea7_App.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 1 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 2 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 3 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.ComponentModel.DataAnnotations;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 4 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 5 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 6 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 7 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 8 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 9 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 10 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 11 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Tarea7_App;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 12 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using Tarea7_App.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 13 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.Text.Json.Serialization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 14 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\_Imports.razor"
+#line 14 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\_Imports.razor"
 using System.Net;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\Pages\RegistrarVacunado.razor"
+#line 2 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\RegistrarVacunado.razor"
 using Tarea7_App.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\Pages\RegistrarVacunado.razor"
+#line 3 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\RegistrarVacunado.razor"
 using System.Data.SqlClient;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\Pages\RegistrarVacunado.razor"
+#line 4 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\RegistrarVacunado.razor"
 using Microsoft.Data.Sqlite;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\Pages\RegistrarVacunado.razor"
+#line 5 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\RegistrarVacunado.razor"
 using Microsoft.EntityFrameworkCore;
 
 #line default
@@ -147,19 +147,25 @@ using Microsoft.EntityFrameworkCore;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 85 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\repo_tarea7\tarea7_app\Pages\RegistrarVacunado.razor"
+#line 85 "C:\Users\civar\Desktop\Tarea\Programacion III\Tarea7\Repo_Tarea7\Tarea7_App\Pages\RegistrarVacunado.razor"
       
+    // Variables al utilizar en el codigo.
     bool exits;
     string Mensaje;
     int dia, mes;
     string MesString;
     string DiaString;
 
+    // Instancia de la clase del Models Vacunados donde se guardaran los Registro.
     Vacunados vc = new Vacunados();
+
+    // Lista de los vacunados con Where, para saber si existe el registro.
     List<Vacunados> GetVacunados() => new Tarea6Context().Vacunados.Where(v => v.Cedula == vc.Cedula).ToList();
-    
+
+    // Lista la cual se usara para carga los datos del select.
     List<Vacunas> GetVacunas() => new Tarea6Context().Vacunas.ToList();
 
+    // Mapeo del Json de la API.
     public class Root {
         public string Cedula { get; set; } 
         public string Nombres { get; set; } 
@@ -199,14 +205,15 @@ using Microsoft.EntityFrameworkCore;
         public string foto { get; set; } 
     }
 
+    // Instancia de la clase del Mapeo del Json.
     Root Persona = new Root();
     
-    //Metodos para Buscar y validar la cedula a traves de la API.
+    // Metodos para Buscar y validar la cedula a traves de la API.
     async Task FindPerson(){
         // cargando variable con el Json de la API.
         Persona = await Http.GetFromJsonAsync<Root>("https://api.adamix.net/apec/cedula/"+vc.Cedula);
         
-        //Condicion para saber que la variable con el Json esta cargada y contiene los datos del cliente
+        // Condicion para saber que la variable con el Json esta cargada y contiene los datos del cliente
         if(Persona.ok){
 
             // Con este foreach conocemos si el vacunado ya existe.
@@ -214,38 +221,56 @@ using Microsoft.EntityFrameworkCore;
                 exits = true;
             }
 
-            //Condicion en caso de que la cedula esta registrada.
+            // Condicion en caso de que la cedula esta registrada.
             if(exits==true){
                 Mensaje="Paciente Ya Con la Primera Vacuna!";
 
-                //
+                // Conexion manual a la base de datos para el metodo raw de guardar la segunda fecha.
                 SqliteConnection cone;
+
+                // connetion string.
                 cone = new SqliteConnection(@"Data Source= Data//Tarea6.db");
+
+                // Abriendo la conexion.
                 cone.Open();
+                
+                // Cargando la variable con el dato que se va a guardar.
                 vc.FechaSdosis = DateTime.Now.ToString("yyyy-MM-dd");
+
+                // Sentencia de sql para el proceso de update.
                 var query = "UPDATE Vacunados SET Fecha_SDosis = '"+vc.FechaSdosis+"' Where Cedula =" + vc.Cedula;
 
+                // Creando nuevo comando al cual le pasamos la conexion y la sentencia.
                 SqliteCommand command = new SqliteCommand(query, cone);
 
                 using (Tarea6Context cmd_SegundaDosis = new Tarea6Context())
                 {
+                    // Ejecutar sentencia.
                     cmd_SegundaDosis.Database.ExecuteSqlRaw(query, vc.Cedula);
                 }
+
+                // Cerrando la conexion
                 cone.Close();
+
+                // Mensaje del estado del proceso.
                 Mensaje="El Paciente ya estaba Registrado, por lo Cual se le registro la Segunda Dosis!";
-                RestarVacuna();
+                // Llamada al metodo para restar la cedula.
+                
             } 
+            // De caso contrario se le cargaran estos datos a las variables.
             else{
                 vc.Nombre = Persona.Nombres;
                 vc.Apellido = Persona.Apellido1 + " " + Persona.Apellido2;
                 vc.FechaNacimiento = Persona.FechaNacimiento.Substring(0,10);
                 vc.FechaPdosis = DateTime.Now.ToString("yyyy-MM-dd");
-
+                
+                //Cargando en variables los contenidos de la fecha.
                 MesString =Persona.FechaNacimiento.Substring(5,2);
                 mes = int.Parse(MesString);
                 DiaString =Persona.FechaNacimiento.Substring(8,2);
                 dia = int.Parse(DiaString);
 
+                //Con esos contenidos los analizaremos para saber cual es su Signo Zodiacal.
                 if((dia>=21&&mes==3)||(dia<=20&&mes==4)){
                     vc.SignoZodiacal =  "Aries";
                 }
@@ -294,15 +319,16 @@ using Microsoft.EntityFrameworkCore;
                     vc.SignoZodiacal = "Piscis";
                 }
 
-                RestarVacuna();
+                // Llamada a metodo Restar Vacuna.
             }
         } 
+        // De caso contrario que no se encuentre datos se mostrara este mensaje.
         else{
             Mensaje="Cedula No Encontrada...";
         }
     }
 
-    //Metodo para registrar registrados.
+    // Metodo para registrar registrados.
     void AddPerson(){
         using (Tarea6Context cmd_Insert = new Tarea6Context())
                 {
@@ -319,7 +345,7 @@ using Microsoft.EntityFrameworkCore;
                 }
     }
 
-    //Metodo para limpiar los campos.
+    // Metodo para limpiar los campos.
     void Clear(){
         vc.Cedula = null;
         vc.Nombre = "";
@@ -335,7 +361,7 @@ using Microsoft.EntityFrameworkCore;
         
     }
 
-    //Metodo Para restar las Vacunas.
+    // Metodo Para restar las Vacunas.
     void RestarVacuna(){
         
     }

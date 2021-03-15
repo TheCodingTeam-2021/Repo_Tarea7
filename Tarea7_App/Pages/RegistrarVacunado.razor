@@ -77,7 +77,7 @@
 
     <center>
         <p> <button class="btn btn-primary" @onclick="AddPerson" style="background-color: rgb(37, 195, 42); border-color: rgb(37, 195, 42)">Registrar Paciente</button>  
-        <button class="btn btn-primary" @onclick="Clear" style="background-color: rgb(255, 0, 0); border-color: rgb(255, 0, 0)">Cancelar Resgistro</button> </p>
+        <button class="btn btn-primary" @onclick="Clear" style="background-color: rgb(255, 0, 0); border-color: rgb(255, 0, 0)">Limpiar Resgistro</button> </p>
     </center>
     <br>
 </div>
@@ -189,7 +189,7 @@
                 // Mensaje del estado del proceso.
                 Mensaje="El Paciente ya estaba Registrado, por lo Cual se le registro la Segunda Dosis!";
                 // Llamada al metodo para restar la cedula.
-                RestarVacuna();
+                
             } 
             // De caso contrario se le cargaran estos datos a las variables.
             else{
@@ -253,7 +253,7 @@
                     vc.SignoZodiacal = "Piscis";
                 }
 
-                RestarVacuna();
+                // Llamada a metodo Restar Vacuna.
             }
         } 
         // De caso contrario que no se encuentre datos se mostrara este mensaje.

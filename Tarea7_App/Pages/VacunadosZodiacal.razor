@@ -1,3 +1,66 @@
 @page "/VacunadosZodiacal"
-
+@using Tarea7_App.Models;
+@using Microsoft.EntityFrameworkCore;
 <h2>Listado de vacunados por signo zodiacal</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr><th>Signo Zodiacal</th>
+        <th>Numero de personas</th></tr>
+    </thead>
+    
+    <tbody>
+        <tr>
+        <th>Aries</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Tauro</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Geminis</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Cancer</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Leo</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Virgo</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Libra</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Escorpio</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Sagitario</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Capricornio</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Acuario</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+        <tr>
+        <th>Piscis</th>
+        <th>@vs.SignoZodiacal</th>
+        </tr>
+    </tbody>
+</table>
+
+@code{
+    Vacunados vs= new Vacunados();
+
+}

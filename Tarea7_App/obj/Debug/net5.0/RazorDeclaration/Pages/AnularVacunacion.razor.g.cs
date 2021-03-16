@@ -203,26 +203,6 @@ using Microsoft.EntityFrameworkCore;
 
     }
 
-    // Metodo para registrar registrados.
-    void AddPerson()
-    {
-        using (Tarea6Context cmd_Insert = new Tarea6Context())
-        {
-            if (vc.Cedula == null)
-            {
-                Mensaje = "Debe Lenar el Campo Cedula!";
-
-            }
-            else
-            {
-                cmd_Insert.Add(vc);
-                cmd_Insert.SaveChanges();
-                Clear();
-                Mensaje = "Paciente Vacunado!";
-            }
-        }
-    }
-
 #line default
 #line hidden
 #nullable disable

@@ -1,3 +1,27 @@
 @page "/VacunadosMarca"
-
+@using Tarea7_App.Models;
 <h2>Listado de vacunados por marca de vacuna</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Personas vacunadas</th>
+            <th>Marca de vacuna</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <th>@vacdos.Nombre</th>
+            <th>@vac.Marca</th>
+        </tr>
+        <tr>
+            <th>@vacdos.Nombre</th>
+            <th>@vac.Marca</th>
+        </tr>
+    </tbody>
+</table>
+
+@code{
+    Vacunas vac = new Vacunas();
+    Vacunados vacdos = new Vacunados();
+}
